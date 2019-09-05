@@ -29,7 +29,7 @@ public protocol AyLoadingCompatible {
 }
 
 public extension AyLoadingCompatible {
-    public var ay: AyLoading<Self> {
+    var ay: AyLoading<Self> {
         get { return AyLoading(self) }
     }
 }
