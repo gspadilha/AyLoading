@@ -10,7 +10,7 @@ import UIKit
 
 public extension AyLoading where Base: UIView {
     
-    public func addSubview(_ view: UIView, animated: Bool, completed: AnimatedCompleted? = nil) {
+    func addSubview(_ view: UIView, animated: Bool, completed: AnimatedCompleted? = nil) {
         let originAlpha = view.alpha
         view.alpha = 0
         base.addSubview(view)
@@ -23,7 +23,7 @@ public extension AyLoading where Base: UIView {
         UIView.animate(withDuration: animated ? 0.3 : 0.0, animations: animations, completion: completion)
     }
     
-    public func removeFromSuperview(animated: Bool, completed: AnimatedCompleted? = nil) {
+    func removeFromSuperview(animated: Bool, completed: AnimatedCompleted? = nil) {
         let animations: () -> Void = { [weak base] in
             base?.alpha = 0
         }
